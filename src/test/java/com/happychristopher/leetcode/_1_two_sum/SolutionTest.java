@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 class SolutionTest {
-    Solution_3 solution = new Solution_3();
+    Solution_2 solution = new Solution_2();
 
     @Test
     void twoSum() {

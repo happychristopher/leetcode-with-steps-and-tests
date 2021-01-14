@@ -1,3 +1,7 @@
+/**
+ * brute force, O(n^2)
+ */
+
 package com.happychristopher.leetcode._1_two_sum;
 
 public class Solution_1 {
