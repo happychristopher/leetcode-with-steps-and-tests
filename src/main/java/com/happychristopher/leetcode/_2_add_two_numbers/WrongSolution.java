@@ -5,7 +5,7 @@
 
 package com.happychristopher.leetcode._2_add_two_numbers;
 
-public class WrongAnswer {
+public class WrongSolution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         long result = convertListToInteger(l1) + convertListToInteger(l2);
 
