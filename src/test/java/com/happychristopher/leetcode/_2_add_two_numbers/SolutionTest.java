@@ -8,7 +8,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 class SolutionTest {
-    Solution_2 solution1 = new Solution_2();
+    Solution_2 solution = new Solution_2();
 
     private static List<Integer> convertArrayToList(int[] arr) {
         List<Integer> list = new ArrayList<>();
@@ -48,22 +48,22 @@ class SolutionTest {
     void addTwoNumbers() {
         assertIterableEquals(convertArrayToList(new int[]{7, 0, 8}),
                 convertListNodeToArray(
-                        solution1.addTwoNumbers(convertArrayToListNode(new int[]{2, 4, 3}), convertArrayToListNode(new int[]{5, 6, 4}))
+                        solution.addTwoNumbers(convertArrayToListNode(new int[]{2, 4, 3}), convertArrayToListNode(new int[]{5, 6, 4}))
                 ));
 
         assertIterableEquals(convertArrayToList(new int[]{0}),
                 convertListNodeToArray(
-                        solution1.addTwoNumbers(convertArrayToListNode(new int[]{0}), convertArrayToListNode(new int[]{0}))
+                        solution.addTwoNumbers(convertArrayToListNode(new int[]{0}), convertArrayToListNode(new int[]{0}))
                 ));
 
         assertIterableEquals(convertArrayToList(new int[]{8, 9, 9, 9, 0, 0, 0, 1}),
                 convertListNodeToArray(
-                        solution1.addTwoNumbers(convertArrayToListNode(new int[]{9, 9, 9, 9, 9, 9, 9}), convertArrayToListNode(new int[]{9, 9, 9, 9}))
+                        solution.addTwoNumbers(convertArrayToListNode(new int[]{9, 9, 9, 9, 9, 9, 9}), convertArrayToListNode(new int[]{9, 9, 9, 9}))
                 ));
 
         assertIterableEquals(convertArrayToList(new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1}),
                 convertListNodeToArray(
-                        solution1.addTwoNumbers(convertArrayToListNode(new int[]{9}), convertArrayToListNode(new int[]{1, 9, 9, 9, 9, 9, 9, 9, 9, 9}))
+                        solution.addTwoNumbers(convertArrayToListNode(new int[]{9}), convertArrayToListNode(new int[]{1, 9, 9, 9, 9, 9, 9, 9, 9, 9}))
                 ));
     }
 }
