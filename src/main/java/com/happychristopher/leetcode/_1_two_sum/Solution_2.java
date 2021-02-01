@@ -4,19 +4,53 @@
 
 package com.happychristopher.leetcode._1_two_sum;
 
+import com.happychristopher.leetcode.utility.Format;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Solution_2 {
+    Logger logger = LoggerFactory.getLogger(Solution_2.class);
+
     public int[] twoSum(int[] nums, int target) {
+        if (logger.isDebugEnabled()) {
+            logger.debug("\nnums: {}, target: {}\n", nums, target);
+        }
+
         Map<Integer, Integer> map = new HashMap<>();
+
         for (int i = 0; i < nums.length; i++) {
-            int complement = target - nums[i];
-            if (map.containsKey(complement)) {
-                return new int[]{map.get(complement), i};
+            if (logger.isDebugEnabled()) {
+                logger.debug("{}", nums);
+                logger.debug("{}", new Format<>().toArrayMark(Arrays.stream(nums).mapToObj(num -> Integer.valueOf(num)).toArray(), "^", i));
             }
 
-            map.put(nums[i], i);
+            int complement = target - nums[i];
+
+            if (logger.isDebugEnabled()) {
+                logger.debug("complement of nums[{}] is {}", i, complement);
+            }
+
+            if (map.containsKey(complement)) {
+                if (logger.isDebugEnabled()) {
+                    logger.debug("map {} contains key {}\nreturn map({}) and {}: {}", map, complement, complement, i, new int[]{map.get(complement), i});
+                }
+
+                return new int[]{map.get(complement), i};
+            } else {
+                if (logger.isDebugEnabled()) {
+                    logger.debug("map {} doesn't contain key {}, put (nums[{}], {}) to map", map, complement, i, i);
+                }
+
+                map.put(nums[i], i);
+
+                if (logger.isDebugEnabled()) {
+                    logger.debug("map: {}\n", map);
+                }
+            }
         }
 
         return null;
