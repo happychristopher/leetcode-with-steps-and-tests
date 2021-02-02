@@ -4,7 +4,7 @@
 
 package com.happychristopher.leetcode._1_two_sum;
 
-import com.happychristopher.leetcode.utility.Format;
+import com.happychristopher.leetcode.utility.Output;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,10 +13,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution_2 {
-    Logger logger = LoggerFactory.getLogger(Solution_2.class);
+    private final Logger logger = LoggerFactory.getLogger(Solution_2.class);
 
     public int[] twoSum(int[] nums, int target) {
         if (logger.isDebugEnabled()) {
+            System.out.println();
             logger.debug("\nnums: {}, target: {}\n", nums, target);
         }
 
@@ -25,7 +26,7 @@ public class Solution_2 {
         for (int i = 0; i < nums.length; i++) {
             if (logger.isDebugEnabled()) {
                 logger.debug("{}", nums);
-                logger.debug("{}", new Format<>().toArrayMark(Arrays.stream(nums).mapToObj(num -> Integer.valueOf(num)).toArray(), "^", i));
+                logger.debug("{}", new Output<>().printArrayMark(Arrays.stream(nums).mapToObj(num -> Integer.valueOf(num)).toArray(), "^", i));
             }
 
             int complement = target - nums[i];
