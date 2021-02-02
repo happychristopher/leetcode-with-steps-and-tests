@@ -1,7 +1,7 @@
 package com.happychristopher.leetcode.utility;
 
-public class Format<E> {
-    public StringBuilder toArrayMark(E[] arr, String str, int index) {
+public class Output<E> {
+    public StringBuilder printArrayMark(E[] arr, String str, int index) {
         StringBuilder mark = new StringBuilder();
 
         // 替换"["
@@ -21,7 +21,7 @@ public class Format<E> {
         return mark;
     }
 
-    public StringBuilder toArrayMarks(E[] arr, String str, int floor, int ceiling) {
+    public StringBuilder printArrayMarks(E[] arr, String str, int floor, int ceiling) {
         StringBuilder mark = new StringBuilder();
 
         // 替换"["
@@ -40,4 +40,6 @@ public class Format<E> {
 
         return mark;
     }
+
+
 }
