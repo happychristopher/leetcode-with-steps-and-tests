@@ -15,4 +15,22 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        ListNode current = this;
+        while (current != null) {
+            stringBuilder.append(current.val);
+
+            if (current.next != null) {
+                stringBuilder.append("->");
+            }
+
+            current = current.next;
+        }
+
+        return stringBuilder.toString();
+    }
 }
