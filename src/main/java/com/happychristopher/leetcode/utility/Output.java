@@ -40,6 +40,4 @@ public class Output<E> {
 
         return mark;
     }
-
-
 }
