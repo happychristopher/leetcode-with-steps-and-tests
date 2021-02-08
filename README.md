@@ -1,1 +1,1 @@
-Official solutions and my own solutions with steps and unit tests.
+Official and my own solutions with step demonstrations and unit tests.
